@@ -1,36 +1,48 @@
 /* Combined CSS */
 
 body {
-    background-color: #000; /* Change background color to black */
-    font-family: Arial, sans-serif; 
+    background-color: #000;
+    /* Change background color to black */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff; /* Set text color to white */
+    color: #fff;
+    /* Set text color to white */
 }
 
 /* Header styles */
 header {
-    background-color: #000; /* Change header background color to black */
-    color: #fff; /* White text color */
+    background-color: #000;
+    /* Change header background color to black */
+    color: #fff;
+    /* White text color */
     padding: 20px 0;
 }
 
 /* Change text color and add black outline for all headings and paragraphs */
-h1, h2, p {
-    color: #fff; /* Set text color to white */
-    text-shadow: 2px 2px 4px #000; /* Add black shadow for text */
+h1,
+h2,
+p {
+    color: #fff;
+    /* Set text color to white */
+    text-shadow: 2px 2px 4px #000;
+    /* Add black shadow for text */
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
+    width: auto;
+    margin-bottom: 20px;
+    position: relative;
+        /* position property */
+    z-index: 1;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    color: #fff; /* White text color */
+    color: #fff;
+    /* White text color */
 }
 
 .menu {
@@ -39,12 +51,15 @@ h1, h2, p {
     margin: 0;
     position: fixed;
     top: 50%;
-    right: 20px; /* Adjust as needed */
+    right: 20px;
+    /* Adjust as needed */
     transform: translateY(-50%);
-    background-color: #000; /* Black background color */
+    background-color: #000;
+    /* Black background color */
     padding: 10px;
     border-radius: 10px;
-    z-index: 999; /* Ensure navigation bar is on top */
+    z-index: 999;
+    /* Ensure navigation bar is on top */
 }
 
 .menu li {
@@ -58,9 +73,12 @@ h1, h2, p {
 
 .menu a {
     text-decoration: none;
-    color: #fff; /* White text color */
-    font-family: "Garamond", serif; /* Fantasy font */
-    font-size: 16px; /* Adjust font size */
+    color: #fff;
+    /* White text color */
+    font-family: "Garamond", serif;
+    /* Fantasy font */
+    font-size: 16px;
+    /* Adjust font size */
     display: block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -68,38 +86,51 @@ h1, h2, p {
 }
 
 .menu a:hover {
-    background-color: #f2c464; /* Golden brown hover color */
-    color: #000; /* Change text color on hover */
+    background-color: #4682B4;
+    /* Golden brown hover color */
+    color: #000;
+    /* Change text color on hover */
 }
 
 /* Hero section styles */
 .hero {
-    background-image: url('hero-image.png'); /* Set the hero image here */
+    /*background-image: url('hero-image.png');*/
+    /* Set the hero image here */
     background-size: cover;
-    height: 100vh;
+    /* Adjusted to contain? changed to cover */
+    background-repeat: no-repeat;
+    /* Prevent image repetition */
+    background-position: center;
+    /* Center the background image */
+    height: 42vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff; /* White text color */
+    color: #fff;
+    transition: background-image 1s ease-in-out; /*smooth slide eff*/
 }
 
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px #000; /* Add black shadow for text */
+    text-shadow: 2px 2px 4px #000;
+    /* Add black shadow for text */
 }
 
 .hero p {
     font-size: 18px;
     margin-bottom: 40px;
-    text-shadow: 2px 2px 4px #000; /* Add black shadow for text */
+    text-shadow: 2px 2px 4px #000;
+    /* Add black shadow for text */
 }
 
 /* Blog section styles */
 .blog {
-    background-color: #f7f7f7; /* Light gray background color */
-    padding: 100px 0; /* Doubled the padding */
+    background-color: #f7f7f7;
+    /* Light gray background color */
+    padding: 100px 0;
+    /* Doubled the padding */
 }
 
 .blog h2 {
@@ -119,12 +150,14 @@ h1, h2, p {
 
 .blog a {
     text-decoration: none;
-    color: #57415d; /* Purple text color */
+    color: #57415d;
+    /* Purple text color */
     font-weight: bold;
 }
 
 .blog a:hover {
-    color: #f2c464; /* Golden brown hover color */
+    color: #4682B4;
+    /* Golden brown hover color */
 }
 
 /* About section styles */
@@ -145,7 +178,8 @@ h1, h2, p {
 
 /* Contact section styles */
 .contact {
-    background-color: #f7f7f7; /* Light gray background color */
+    background-color: #f7f7f7;
+    /* Light gray background color */
     padding: 50px 0;
 }
 
@@ -174,8 +208,10 @@ h1, h2, p {
 
 .contact-form button {
     padding: 10px 20px;
-    background-color: #000000; /* Purple background color */
-    color: #fff; /* White text color */
+    background-color: #000000;
+    /* Purple background color */
+    color: #fff;
+    /* White text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -183,77 +219,109 @@ h1, h2, p {
 }
 
 .contact-form button:hover {
-    background-color: #f2c464; /* Golden brown hover color */
+    background-color: #4682B4;
+    /* Golden brown hover color */
 }
 
 /* Footer styles */
 footer {
-    background-color: #000; /* Purple background color */
-        color: #fff; /* White text color */
-        text-align: center;
-        padding: 20px 0;
-        height: auto; /* Auto height */
-    }
-    
-    .social-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 16px; /* Adjust the font size */
-    }
-    
-    .social-links li {
-        display: inline-block;
-        margin-right: 5px; /* Adjust the margin */
-    }
-    
-    .social-links li:last-child {
-        margin-right: 0;
-    }
-    
-    .social-links a {
-        color: #fff; /* White text color */
-        text-decoration: none;
-    }
-    
-    .social-links a:hover {
-        color: #f2c464; /* Golden brown hover color */
-    }
-    
-    /* Navigation bar styles */
-    .navbar {
-        position: fixed;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-        padding: 10px;
-        border-radius: 10px;
-        z-index: 999; /* Ensure navigation bar is on top */
-        font-family: "Garamond", serif; /* Fantasy font */
-    }
-    
-    .navbar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .navbar li {
-        margin-bottom: 10px;
-    }
-    
-    .navbar a {
-        color: #fff; /* White text color */
-        text-decoration: none;
-        font-size: 18px;
-        display: block;
-        padding: 8px 15px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-    
-    .navbar a:hover {
-        background-color: rgba(242, 196, 100, 0.7); /* Semi-transparent golden brown hover color */
-    }
+    background-color: #000;
+    /* Purple background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    padding: 20px 0;
+    height: auto;
+    /* Auto height */
+}
 
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    /* Adjust the font size */
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 5px;
+    /* Adjust the margin */
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.social-links a {
+    color: #fff;
+    /* White text color */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #4682B4;
+    /* Golden brown hover color */
+}
+
+/* Top-page navigation bar styles */
+.toppage-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 999;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.toppage-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toppage-nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.toppage-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 30px 5px 10px;
+    /* Adjust padding to accommodate the logo */
+}
+
+.toppage-nav a:hover {
+    background-color: #f2c464;
+}
+
+/* Ensure the logo is vertically centered */
+.toppage-nav ul li a::before {
+    vertical-align: middle;
+}
+
+/* Add logo images */
+.toppage-nav .linkedin::before {
+    content: url('linkedin_logo.png');
+    /* Replace 'linkedin_logo.png' with the path to your LinkedIn logo */
+    width: 40px;
+    height: 38px;
+}
+
+.toppage-nav .twitter::before {
+    content: url('twitter_logo.png');
+    /* Replace 'twitter_logo.png' with the path to your Twitter logo */
+    width: 40px;
+    height: 38px;
+}
+
+.toppage-nav .github::before {
+    content: url('github_logo.png');
+    /* Replace 'github_logo.png' with the path to your Github logo */
+    width: 40px;
+    height: 38px;
+}

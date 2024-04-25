@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Magical World</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS styles if needed */
+        .blog {
+            text-align: center;
+            /* Center the content */
+        }
+
+        .blog h2 {
+            margin-bottom: 20px;
+            /* Add some spacing below the heading */
+        }
+
+        .blog img {
+            margin: 10px;
+            /* Add margin around images */
+        }
+
+        .blog img.image1 {
+            width: 800px;
+            /* Set width for Image 1 */
+            height: 181px;
+            /* Set height for Image 1 */
+        }
+
+        .blog img.image2 {
+            width: 180px;
+            /* Set width for Image 2 */
+            height: 180px;
+            /* Set height for Image 2 */
+        }
+
+        /* Add margin to about section */
+        /*.about {
+            margin-bottom: 50px;
+        }
+
+        /* Navigation bar styles */
+        .toppage-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            z-index: 999;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .toppage-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toppage-nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .toppage-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .toppage-nav a:hover {
+            background-color: #87CEEB ;
+        }
+    </style>
+</head>
+
+<body>
+  <!-- Top-page navigation bar -->
+<nav class="toppage-nav">
+    <ul>
+        <!---<li><a href="#" class="model-about-trigger">ABOUT</a></li> testing--->
+        <li><a href="https://linkedin.com/in/jonathan-duvall-47-" class="linkedin"></a></li>
+        <li><a href="https://twitter.com/Ethriel4" class="twitter"></a></li>
+        <li><a href="https://github.com/Ethriel4" class="github"></a></li>
+    </ul>
+</nav>
+
+
+    <header>
+        <nav>
+            <div class="container">
+                <a href="#" class="logo"></a>
+            </div>
+        </nav>
+        <div class="hero"></div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>New grad with a degree in Network Engineering and CyberSecurity.
+            Plan on transforming this into a blog while pursuing a Masters in CyberSecurity at GeorgiaTech.</h2>
+            <p></p>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Certifications</h2>
+            <!--<img class="image1" src="image1.jpg" alt="Image 1">-->
+            <img class="image2" src="image8.png" alt="Image 4">
+            <img class="image2" src="image6.png" alt="Image 4">
+            <img class="image2" src="image7.png" alt="Image 4">
+            <img class="image2" src="image2.jpg" alt="Image 2">
+            <img class="image2" src="image3.jpg" alt="Image 3">
+            <img class="image2" src="image4.jpg" alt="Image 4">
+            <h2>In the process of obtaining</h2>
+            <img class="image2" src="image9.png" alt="Image 4">
+            <img class="image2" src="image10.png" alt="Image 4">
+            <img class="image2" src="image11.png" alt="Image 4">
+        </div>
+    </section>
+
+    <script>
+        
+       document.addEventListener("DOMContentLoaded", function () {
+            const hero = document.querySelector('.hero');
+            const images = [
+                'images11.jpg',
+                'images22.jpg',
+                'images33.jpg'
+            ];
+            let index = 0;
+
+            function changeBackground() {
+                // Increment index to get the next image
+                index = (index + 1) % images.length;
+                // Set the background image of the hero container
+                hero.style.backgroundImage = `url(${images[index]})`;
+                // Slide the background image horizontally
+                hero.style.backgroundPosition = '100% 0'; // Adjust the position according to your preference
+                // Wait for a short delay before resetting the background position
+                setTimeout(() => {
+                    hero.style.backgroundPosition = '0 0'; // Reset the background position
+                }, 100); // Adjust the duration of the delay as needed
+            }
+
+            // Call the changeBackground function initially to show the first image immediately
+            changeBackground();
+
+            // Set interval to change the background image every 4 seconds (3500 milliseconds)
+            setInterval(changeBackground, 4150);
+        });
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll('.navbar a');
+
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        const windowHeight = window.innerHeight;
+                        const sectionHeight = targetSection.offsetHeight;
+                        const sectionTop = targetSection.offsetTop;
+                        let scrollToPosition = sectionTop - (windowHeight - sectionHeight) / 2;
+                        window.scrollTo({
+                            top: scrollToPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+        
+</html>
